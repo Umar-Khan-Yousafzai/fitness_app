@@ -41,4 +41,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function footsteps()
+    {
+        return $this->hasMany(FootStep::class,'id','user_id')->select('steps_count');
+    }
 }
