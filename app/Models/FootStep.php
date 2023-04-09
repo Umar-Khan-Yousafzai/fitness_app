@@ -15,4 +15,9 @@ class FootStep extends Model
         'end_time'
     ];
     use HasFactory;
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

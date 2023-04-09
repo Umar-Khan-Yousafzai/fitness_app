@@ -22,13 +22,10 @@ class UserSeeder extends Seeder
             User::create([
                 'name' => $faker->name,
                 'email' => $faker->unique()->safeEmail,
+                'imageUrl'=>'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXSTblEVkkdJh15jlAbC3FpvuzCKb1o-pQQA&usqp=CAU',
                 'password' => bcrypt('12345678'),
             ]);
         }
-        // \App\Models\User::factory()->create([
-        //     'name' => 'test user',
-        //     'email' => 'test@example.com',
-        //     'password' => Hash::make('12345678'),
-        // ]);
+
     }
 }

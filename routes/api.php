@@ -19,6 +19,6 @@ use App\Http\Controllers\API\RegisterController;
 Route::post('/login',[RegisterController::class,'login']);
 
 Route::middleware('auth:sanctum')->group(function () {
-
+    Route::get('/footsteps', [FootStepController::class, 'getFootSteps']);
     Route::post('/footsteps', [FootStepController::class, 'store']);
 });
